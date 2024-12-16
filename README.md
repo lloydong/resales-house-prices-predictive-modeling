@@ -54,33 +54,31 @@ In response to this, the CEO has tasked the Head of the Data Analytics Team with
 
 - **Exploratory Data Analysis (EDA)**: 
 
-    Distribution of flight prices: <ins>$40 – 50 is the most common flight prices<ins>
+    ![distribution](./pictures/over_the_years.png "distribution")
 
-    ![distribution](./pictures/distribution_of_flight_prices_1.png "distribution")
+    Distribution of HDB resale prices: <ins>$40 – 50 is the most common flight prices<ins>
+
+    ![distribution](./pictures/normal_dist.png "distribution")
 
     Average flight price by calendar day: <ins>Flight price is the most expensive on 1st & 6th of the month<ins>
   
-    ![distribution](./pictures/calendar_day.png "distribution")
+    ![distribution](./pictures/region.png "distribution")
 
     Average flight price by month: <ins>Flight price is the lowest in April<ins>
     
-    ![distribution](./pictures/month.png "distribution")
+    ![distribution](./pictures/storey.png "distribution")
 
     Average flight price by booking in advance (days): <ins>Flight price is the highest if one books and travels on the same day<ins>
     
-    ![distribution](./pictures/booking_in_advance.png "distribution")
+    ![distribution](./pictures/floor_area.png "distribution")
 
     Flight prices across different durations: <ins>Flight prices positively correlates with durations<ins>
     
-    ![distribution](./pictures/durations.png "distribution")
+    ![distribution](./pictures/flat_type.png "distribution")
 
-    Flight price by departure session: <ins>Flight price is lowest if departure session is dawn<ins>
-    
-    ![distribution](./pictures/departure.png "distribution")
 
-    Flight price by arrival session: <ins>Flight price is slightly lower if arrival session is morning or afternoon<ins>
     
-    ![distribution](./pictures/arrival.png "distribution")
+
 
 
 ## Key Features
