@@ -18,7 +18,7 @@ In response to this, the CEO has tasked the Head of the Data Analytics Team with
 3. [Data Exploration](#data-exploration)
 4. [Data Cleaning](#data-cleaning)
 5. [Analysis](#analysis)
-6. [Modeling (if applicable)](#modeling)
+6. [Modeling](#modeling)
 7. [Results and Insights](#results-and-insights)
 8. [Conclusion](#conclusion)
 9. [Future Work](#future-work)
@@ -119,7 +119,7 @@ In response to this, the CEO has tasked the Head of the Data Analytics Team with
 ## Future Work
 
 Future enhancements for this linear regression model include:
-- experimenting with more complex models like Random Forests, Gradient Boosting Machines (GBM), or XGBoost can improve predictive accuracy.
+- Experimenting with more complex models like Random Forests, Gradient Boosting Machines (GBM), or XGBoost can improve predictive accuracy.
 - Incorporating a new feature, 'supermall proximity,' to better capture the influence of nearby shopping malls on HDB resale values.
 - Enhancing the Tableau dashboard to improve interactivity, user experience, and data visualization.
 - Implementing Auto ARIMA for time-series forecasting to further refine predictions based on market trends and seasonal fluctuations.
