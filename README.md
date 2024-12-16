@@ -35,12 +35,12 @@ In response to this, the CEO has tasked the Head of the Data Analytics Team with
 - **Dataset Overview**:
   - GA's ‘train_data.csv’, 78 columns x 150,634 rows, January 2012 to April 2021
   - GA's ‘test_data.csv’, 78 columns x 16,737 rows, March 2012 to April 2021
+
 - **Data Description**: Floor Level, Unit Type, HDB Age, Location, Approximate distance to Public Transport/Hawker Center/etc.
 
 ## Data Limitations
-- **Limited training data**: Only from March to June 201
-- **Historical biases**: E.g., during economic downturns or periods of low demand can skew predictions
-- **Macroeconomic events**: Factors like oil price changes, pandemics, or geopolitical instability (e.g., wars, government regulations) can drastically alter flight pricing
+- **Limited HDB townships data**: Only ⅛ of the historical data have been used for training and data analysis, on basis of total number of actual historical sold resale flats in Singapore from 2012 to 2021
+- **Historical biases**: As resale prices trends overtime due to several external factors (such as: changes in employment rate, foreign investment or even inflation) and government policies to curb the rising prices of resale flats in Singapore
 
 ## Data Cleaning
 - **Missing Values**: Replaced with '0' for mall within 500km, 1km and 2km and for hawker within 500m, 1km and 2km that have null values
@@ -116,15 +116,10 @@ In response to this, the CEO has tasked the Head of the Data Analytics Team with
   - R<sup>2</sup> Score : 0.85 (85% of the changes / variation in the resale prices of HDB houses can be explained by our model)
 
 
-
-## Recommendations
-
-
-
-
 ## Future Work
 
 Future enhancements for this linear regression model include:
+- experimenting with more complex models like Random Forests, Gradient Boosting Machines (GBM), or XGBoost can improve predictive accuracy.
 - Incorporating a new feature, 'supermall proximity,' to better capture the influence of nearby shopping malls on HDB resale values.
 - Enhancing the Tableau dashboard to improve interactivity, user experience, and data visualization.
 - Implementing Auto ARIMA for time-series forecasting to further refine predictions based on market trends and seasonal fluctuations.
