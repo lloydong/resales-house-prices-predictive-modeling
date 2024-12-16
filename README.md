@@ -50,29 +50,37 @@ In response to this, the CEO has tasked the Head of the Data Analytics Team with
   
 ## Analysis
 - **Feature Engineering**:
-  -	Created ‘region’ from ‘town’ which has 'south', 'north', 'east', 'west' and 'central'
+  -	Created ‘region’ which has 'north', 'east', 'west' and 'central' from ‘town’ 
+
+ - **Overview of HDB Resales Prics from 2012 to 2021**
+  
+    ![distribution](./pictures/over_the_years.png "distribution")
+
+    - **2012 - 2013**: Peak due to high demand and economic growth
+    - **2013 - 2014**: Cooling measures was introduced to stabilise the rising resale price
+    - **2015 - 2019**: Stabilizing with steady market correction
+    - **2020**: Covid-19 caused uncertainty in market and shift in housing preference
+    - **2021**: Demand peaks after lockdown ended
 
 - **Exploratory Data Analysis (EDA)**: 
 
-    ![distribution](./pictures/over_the_years.png "distribution")
-
-    Distribution of HDB resale prices: <ins>$40 – 50 is the most common flight prices<ins>
+    Distribution of HDB resale prices: <ins>$400k - $500k is the most frequently transacted value<ins>
 
     ![distribution](./pictures/normal_dist.png "distribution")
 
-    Average flight price by calendar day: <ins>Flight price is the most expensive on 1st & 6th of the month<ins>
+    Average HDB resale prices by region: <ins>HDB resale price is the most expensive in central<ins>
   
     ![distribution](./pictures/region.png "distribution")
 
-    Average flight price by month: <ins>Flight price is the lowest in April<ins>
+    Average HDB resale prices by storey level: <ins>HDB units with higher floor commands higher prices<ins>
     
     ![distribution](./pictures/storey.png "distribution")
 
-    Average flight price by booking in advance (days): <ins>Flight price is the highest if one books and travels on the same day<ins>
+    Average HDB resale prices by floor area (sqm): <ins>Bigger HDB flats are transacted to have higher resale values<ins>
     
     ![distribution](./pictures/floor_area.png "distribution")
 
-    Flight prices across different durations: <ins>Flight prices positively correlates with durations<ins>
+    Average HDB resale prices across different flat types: <ins>The bigger the HDB unit the more expensive it is<ins>
     
     ![distribution](./pictures/flat_type.png "distribution")
 
@@ -94,46 +102,29 @@ In response to this, the CEO has tasked the Head of the Data Analytics Team with
 
 ## Modeling - Linear Regression
 - Correlation between key factors < ±0.9
-- Linear relationship between flight price and different factors .
+- Linear relationship between resale price and different factors .
+- For example: 
+  - Every km further from MRT would decrease the unit value by $25,000
+  - Every sqm increase will have an positive impact of $ 104,000
 
-- Model 1 (Using Group 1)
+- Results:
 
-  ![distribution](./pictures/linreg_1.png "distribution")
+  ![distribution](./pictures/actual_predicted.png "distribution")
 
-  - RMSE: 33.51
-  - R<sup>2</sup> Score : 0.6112
+  - RMSE: 55,000 (Based on our model, the predicted price can vary from the actual price by $55,000 on average)
 
+  - R<sup>2</sup> Score : 0.85 (85% of the changes / variation in the resale prices of HDB houses can be explained by our model)
 
-- Model 2 (Using Group 1 + Group 2)
-
-  ![distribution](./pictures/linreg_2.png "distribution")
-
-  - RMSE: 33.50
-  - R<sup>2</sup> Score : 0.6115
-
-## Exploring Other Models
-  | Criteria | Gradient Boosting | Random Forest | Cat Boost | XGB |
-  | --- | --- | --- | --- | --- |
-  | RMSE | 24.24 | 23.89 | 21.89 | 22.76 |
-  | R<sup>2</sup> Score | 0.7966 | 0.8024 | 0.8341 | 0.8206 |
 
 
 ## Recommendations
-It is recommended to use CatBoost Regression for this task, as it consistently yields the lowest RMSE and the highest R² score compared to other models. This machine learning technique effectively leverages features from both Group 1 and Group 2, making it particularly well-suited for predicting flight prices.
-The model is designed to forecast daily flight prices for competing airlines up until the journey date by incorporating real-time data. Swift Airline can use this information to dynamically adjust its own pricing strategy. 
 
-
-**Case 1: Flash sales by competitor on similar route**
-
-When the model predicts that a competitor is running a flash sale or offering temporary price reductions on similar routes, particularly during off-peak periods, Swift Airline can adjust its prices in real-time. By matching the competitor’s lower prices, the airline can maintain its market share and avoid being outpriced, ensuring it remains competitive while preserving customer loyalty.
-
-**Case 2: Capitalizing on High Demand**
-
-Conversely, when the model predicts that flight prices are generally high due to increased demand (e.g., during peak travel seasons), Swift Airline can raise its prices in line with competitors’ fares. By doing so, the airline can maximize revenue without risking customer attrition, ensuring that it capitalizes on favourable market conditions.
-By continuously updating price predictions based on real-time data, the CatBoost Regression model enables Swift Airline to stay agile and competitive in an ever-changing market landscape. This dynamic approach allows the airline to optimize pricing, increase profitability, and maintain its position in a competitive industry.
 
 
 
 ## Future Work
 
-The model needs to be trained on a larger dataset to improve its performance. Once sufficient training data is available, the next step is to assess feature importance, which helps identify the most relevant features for the model. This step is crucial for understanding which inputs contribute the most to the predictions. After evaluating feature importance, hyperparameter tuning should be performed to optimize the model's settings and enhance its ability to make accurate predictions. By systematically training the model, analyzing feature relevance, and fine-tuning hyperparameters, the overall performance of the model can be significantly improved.
+Future enhancements for this linear regression model include:
+- Incorporating a new feature, 'supermall proximity,' to better capture the influence of nearby shopping malls on HDB resale values.
+- Enhancing the Tableau dashboard to improve interactivity, user experience, and data visualization.
+- Implementing Auto ARIMA for time-series forecasting to further refine predictions based on market trends and seasonal fluctuations.
