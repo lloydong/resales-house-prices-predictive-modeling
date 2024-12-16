@@ -15,13 +15,12 @@ In response to this, the CEO has tasked the Head of the Data Analytics Team with
 ## Table of Contents
 1. [Problem Definition](#problem-definition)
 2. [Data Collection](#data-collection)
-3. [Data Exploration](#data-exploration)
+3. [Data Limitations](#data-limitations)
 4. [Data Cleaning](#data-cleaning)
 5. [Analysis](#analysis)
-6. [Modeling](#modeling)
-7. [Results and Insights](#results-and-insights)
-8. [Conclusion](#conclusion)
-9. [Future Work](#future-work)
+6. [Key Features](#key-features)
+7. [Modeling](#modeling)
+8. [Future Work](#future-work)
 
 ## Problem Definition
 - Problem Statement
@@ -100,8 +99,8 @@ In response to this, the CEO has tasked the Head of the Data Analytics Team with
 
 
 
-## Modeling - Linear Regression
-- Correlation between key factors < ±0.9
+## Modeling
+- Predictive modeling is built using linear regression, with correlation between key features < ±0.9
 - Linear relationship between resale price and different factors .
 - For example: 
   - Every km further from MRT would decrease the unit value by $25,000
